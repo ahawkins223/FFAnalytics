@@ -18,6 +18,8 @@ function Home() {
             .catch((err) => alert(err));
     };
 
+    const deleteNote = (id) =>
+
     return <div>Home</div>;
 }
 
