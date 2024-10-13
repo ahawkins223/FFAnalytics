@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import api from "../api";
+import Team from "../components/Team"
+import "../styles/Home.css"
 
 function Home() {
     const [teams, setTeams] = useState([]);
@@ -45,6 +47,9 @@ function Home() {
     <div>
         <div>
             <h2>TEAMS</h2>
+            {teams.map((team) => (
+                <Team team={team} onDelete={deleteTeam} key={team.id} />
+            ))}
         </div>
         <h2>Enter a Team</h2>
         <form onSubmit={createTeam}>

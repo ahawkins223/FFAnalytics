@@ -1,36 +1,67 @@
 .form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 50px auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-  }
-  
-  .form-input {
-    width: 90%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  .form-button {
-    width: 95%;
-    padding: 10px;
-    margin: 20px 0;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  .form-button:hover {
-    background-color: #0056b3;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 100px auto; /* Centered horizontally and vertically */
+  padding: 40px; /* Increased padding for more spacious feel */
+  background-color: #333; /* Dark background */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 600px; /* Increased width to fill more horizontal space */
+  width: 90%; /* Ensure it fills more of the screen width */
+}
+
+.form-input {
+  width: 100%; /* Full width of the form container */
+  padding: 15px; /* Increased padding for larger input fields */
+  margin: 15px 0;
+  background-color: #444;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 18px; /* Larger text for better readability */
+  align-items: center;
+  text-align: left;
+}
+
+.form-button {
+  width: 100%; /* Full width button */
+  padding: 15px; /* Larger button */
+  margin: 20px 0;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px; /* Larger button text */
+  transition: background-color 0.2s ease-in-out;
+}
+
+.form-button:hover {
+  background-color: #0056b3; /* Darker on hover */
+}
+
+form h2 {
+  color: white;
+  margin-bottom: 30px; /* More space below the heading */
+  font-size: 26px; /* Larger heading */
+  text-align: center;
+}
+
+form label {
+  color: white;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px; /* More space between label and input */
+  text-align: center;
+  width: 100%;
+}
+
+form textarea {
+  height: 100px; /* Larger text area */
+  width: 100%;
+  resize: none; /* Disable resizing for consistency */
+  text-align: center;
+}

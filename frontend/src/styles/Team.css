@@ -1,0 +1,34 @@
+.team-container {
+  padding: 10px;
+  margin: 20px 0;
+  background-color: #333; /* Dark background */
+  border: 1px solid #555; /* Dark border */
+  border-radius: 5px;
+}
+
+.team-title {
+  color: rgb(255, 255, 255); /* White text */
+}
+
+.team-content {
+  color: white; /* White text */
+}
+
+.team-date {
+  color: #bbb; /* Slightly lighter gray */
+  font-size: 0.8rem;
+}
+
+.delete-button {
+  background-color: #f44336; /* Red delete button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
