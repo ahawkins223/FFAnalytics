@@ -2,9 +2,32 @@ div {
   font-family: Arial, sans-serif;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: #333;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1000;
+}
+
+li {
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+li:hover {
+  background-color: #007bff;
+}
+
 body {
-  background-color: black; /* Dark background */
-  color: rgb(255, 255, 255); /* White text for contrast */
+  background-color: black;
+  color: rgb(255, 255, 255);
 }
 
 .teams-section {
@@ -12,31 +35,34 @@ body {
 }
 
 .teams-section h2 {
-  color: white; /* White text for contrast */
+  color: white;
   font-size: 24px;
 }
 
 .note {
-  background-color: #444; /* Darker note background */
-  color: white; /* White text */
-  border-left: 5px solid #007bff; /* Accent color */
+  background-color: #444;
+  color: white;
+  border-left: 5px solid #007bff;
   margin: 10px 0;
   padding: 10px 15px;
   border-radius: 5px;
 }
 
 form {
-  background-color: #333; /* Dark form background */
-  color: white; /* White text */
+  background-color: #333;
+  color: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Slight shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   max-width: 500px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 form h2 {
-  color: white; /* White text */
+  color: white;
   font-size: 24px;
   margin-bottom: 20px;
 }
@@ -44,67 +70,47 @@ form h2 {
 form label {
   font-weight: bold;
   margin-top: 10px;
-  color: white; /* White text */
+  color: white;
 }
 
 form input,
 form textarea {
-  background-color: #444; /* Darker input background */
-  color: white; /* White text */
-  border: 1px solid #555; /* Dark border */
+  width: 100%; /* Ensure full width */
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #444;
+  color: white;
+  border: 1px solid #555;
   border-radius: 4px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border: 2px solid #007bff; /* Focus border */
 }
 
 form input[type="submit"] {
-  background-color: #007bff; /* Button color */
+  background-color: #007bff;
   color: white;
-  padding: 10px 20px;
+  padding: 15px;
+  margin-top: 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-}
-
-form input[type="submit"]:hover {
-  background-color: #0056b3; /* Darker on hover */
-}
-form {
-  background-color: #333; /* Keep your existing background color */
-  color: white; /* Keep your existing text color */
-  padding: 20px; /* Adjust padding as needed */
-  border-radius: 8px; /* Keep your existing border radius */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Keep your existing shadow */
-  max-width: 500px; /* Ensure the form doesn't exceed this width */
-  margin: auto; /* Centers the form horizontally */
-  display: flex; /* Use flexbox to align items */
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center align all children horizontally */
-}
-
-form input[type="text"],
-form textarea {
-  width: 100%; /* Full width to fill the form */
-  padding: 15px; /* Add some padding for better spacing */
-  margin: 10px 0; /* Space between input fields */
-  background-color: #444; /* Darker input background */
-  color: white; /* White text color */
-  border: 1px solid #555; /* Dark border color */
-  border-radius: 4px; /* Round the corners */
-  box-sizing: border-box; /* Ensures padding is included in width */
-  text-align: left; /* Align text to the left */
-}
-
-form input[type="submit"] {
-  background-color: #007bff; /* Button color */
-  color: white; /* White text */
-  padding: 15px; /* Larger button */
-  margin-top: 20px; /* Space above the button */
-  border: none; /* No border */
-  border-radius: 4px; /* Rounded corners */
-  cursor: pointer; /* Pointer on hover */
   width: 100%; /* Full width */
-  font-size: 16px; /* Button font size */
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth button color transition */
 }
 
 form input[type="submit"]:hover {
-  background-color: #0056b3; /* Darker color on hover */
+  background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  form {
+      max-width: 90%; /* More width on smaller screens */
+  }
 }

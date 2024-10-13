@@ -9,3 +9,14 @@ class Team(models.Model):
 
     def __str__(self):
         return self.title
+
+class Player(models.Model):
+    espn_id = models.CharField(max_length=100, unique=True)
+    espn_name = models.CharField(max_length=100)
+    yahoo_player_id = models.CharField(max_length=100)
+    team = models.CharField(max_length=100)
+    espn_link = models.URLField(max_length=200)
+    yahoo_link = models.URLField(max_length=200)
+
+    def __str__(self):
+        return self.espn_name

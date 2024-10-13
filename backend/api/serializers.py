@@ -1,6 +1,12 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
 from .models import Team
+from .models import Player
+
+class PlayerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Player
+        fields = ['espn_id', 'espn_name', 'yahoo_player_id', 'team', 'espn_link', 'yahoo_link']
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
